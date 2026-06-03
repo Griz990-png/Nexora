@@ -1,0 +1,1 @@
+package com.nexora.plugins;\n\n/**\n * Interface for Nexora editor/application plugins.\n */\npublic interface ApplicationPlugin {\n    \n    /**\n     * Called when the application plugin is initialized.\n     */\n    void initializePlugin();\n    \n}\n"
