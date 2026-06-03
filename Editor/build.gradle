@@ -1,0 +1,26 @@
+group = 'Editor UI'
+
+apply plugin: 'application'
+
+dependencies {
+    compile project(':Client')
+    compile group: 'org.controlsfx', name: 'controlsfx', version: '8.40.15'
+    compile 'com.jfoenix:jfoenix:8.0.9'
+}
+
+mainClassName = 'com.nexora.LauncherWindow'
+
+jar {
+    archiveName = "Nexora.jar"
+    manifest {
+        attributes(
+            'Main-Class': 'com.nexora.LauncherWindow'
+        )
+    }
+    from configurations.compile.collect { it.isDirectory() ? it : zipTree(it).matching{ exclude{it.path.contains('META-INF') } } }
+}
+
+application {
+    mainClassName = "com.nexora.LauncherWindow"
+    applicationName = 'Nexora'
+}

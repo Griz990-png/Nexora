@@ -1,0 +1,6 @@
+description = 'RS-Cache-Library'
+
+dependencies {
+    compile group: 'org.displee', name: 'cache-library', version: '1.0.0'
+    compile group: 'org.displee', name: 'pack200', version: '1.0.0'
+}
